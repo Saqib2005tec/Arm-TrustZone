@@ -1,0 +1,28 @@
+I/TC: 
+I/TC: Non-secure external DT found
+I/TC: Embedded DTB found
+I/TC: OP-TEE version: 2cabb6d (gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1)) #2 Sun Oct 25 16:15:41 UTC 2026 aarch64
+I/TC: WARNING: This OP-TEE configuration might be insecure!
+I/TC: WARNING: Please check https://optee.readthedocs.io/en/latest/architecture/porting_guidelines.html
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+I/TC: Reserved shared memory is enabled
+I/TC: Dynamic shared memory is enabled
+I/TC: Normal World virtualization support is disabled
+I/TC: Asynchronous notifications are enabled
+I/TA: ====================================================
+I/TA: [KeyVault-TA] Created in Secure EL0!
+I/TA: [KeyVault-TA] 128-bit Secret Key loaded into Secure RAM.
+I/TA: ====================================================
+I/TA: [KeyVault-TA] Normal World (Linux) opened a secure session.
+I/TA: [KeyVault-TA] CMD_GET_INFO: KeySize=128 bits, Status=0xCAFE
+I/TA: [KeyVault-TA] CMD_ENCRYPT: Processed 50 bytes with secret key.
+I/TA: [KeyVault-TA] CMD_DECRYPT: Processed 50 bytes with secret key.
+I/TA: [KeyVault-TA] Session closed.
+I/TA: [KeyVault-TA] Destroyed.

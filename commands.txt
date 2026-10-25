@@ -1,0 +1,38 @@
+for launching the QEMU 
+
+qemu-system-aarch64   -M virt,secure=on,virtualization=on
+   -cpu cortex-a53   -smp 4   -m 1024M   -nographic   -bios flash.bin   
+   -drive if=none,file=boot_disk.img,format=raw,id=hd0   -device virtio-blk-device,drive=hd0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+run this commands on u-boot 
+
+
+
+
+# 1. Inspect files on the virtual block drive
+fatls virtio 0
+
+# 2. Load the Linux kernel Image into RAM at address 0x40400000
+fatload virtio 0 0x40400000 Image
+
+# 3. Load your initramfs.cpio.gz into RAM at address 0x44000000
+fatload virtio 0 0x44000000 initramfs.cpio.gz
+
+# 4. Set the kernel serial console arguments
+setenv bootargs "console=ttyAMA0 earlycon rdinit=/init"
+
+# 5. Boot the ARM64 kernel (Format: booti <kernel_addr> <initrd_addr>:<size> <dtb_addr>)
+booti 0x40400000 0x44000000:$filesize $fdtcontroladdr

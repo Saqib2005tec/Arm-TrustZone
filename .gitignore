@@ -1,0 +1,45 @@
+# Upstream large source trees
+linux/
+u-boot/
+trusted-firmware-a/
+optee_os/
+optee_client/
+buildroot/
+busybox/
+py_modules/
+initramfs_work/
+
+# Large disk images and firmware ROMs
+*.img
+*.bin
+*.rom
+*.bios
+*.cpio.gz
+*.old
+*.bak
+
+# Build intermediate objects and dumps
+*.o
+*.d
+.*.d
+*.cmd
+!boot.cmd
+.*.cmd
+*.dmp
+*.map
+*.elf
+*.stripped.elf
+*.lds
+dyn_list
+
+# Compiled native ELF binaries
+cortex_telemetry
+vault_app
+vault_client/vault_client
+
+# Python cache
+__pycache__/
+*.pyc
+
+# External reference PDFs
+Documentation/ARMv8-A-Programmer-Guide.pdf
